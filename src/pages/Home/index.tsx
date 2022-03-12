@@ -1,4 +1,6 @@
 import Avatar from "../../components/Avatar";
+import avatarUrl from "../../images/avatar.jpg";
+
 import {
     GitHubIcon,
     LinkedinIcon,
@@ -25,7 +27,7 @@ const Home: React.FC = () => {
                         <LinkedinIcon/>
                     </li>
                 </ProfileData>
-                <Avatar path="../src/assets/avatar.jpg" name="Andevaldo"/>
+                <Avatar path={avatarUrl} name="Andevaldo"/>
             </Profile>
     
             <Resumo>
