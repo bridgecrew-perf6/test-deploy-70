@@ -25,7 +25,7 @@ const Home: React.FC = () => {
                         <LinkedinIcon/>
                     </li>
                 </ProfileData>
-                <Avatar path="./src/assets/avatar.jpg" name="Andevaldo"/>
+                <Avatar path="../src/assets/avatar.jpg" name="Andevaldo"/>
             </Profile>
     
             <Resumo>
