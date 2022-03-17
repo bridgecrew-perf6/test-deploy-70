@@ -3,78 +3,78 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 
 
 export const Container = styled.div`
-    --horizontalPadding: 16px;
-    --verticalPadding: 24px;
-`;
-
-export const Profile = styled.div`
-    padding: var(--verticalPadding) var(--horizontalPadding);
+    width: 100%;
+    height: 100%;
+    padding: 75px 24px;
 
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 
-    max-width: 100vw;
-    height: 100vh;
+    @media (min-width: 1280px) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10em;
+        height: 100vh;
+    }
 `;
 
 export const ProfileData = styled.div`
-    width: 600px;
-    display: flex;
-    flex-direction: column;
+    max-width: 375px;
+    margin-top: 16px;
 
-    margin-right: 150px;
-    
-    > li {
-        display: flex;
-        align-items: center;
-        margin-bottom: 4px;
-        
-        h1 {
-            font-size: 42px;
-            font-weight: bold;
-        }
-        
-        h1 + h1 {
-            font-weight: 300;
-            margin-left: 16px;
-        }
+    h1 {
+        font-size: var(-big-font-size);
+        font-weight: var(--font-semi-bold);
     }
 
-    h2 {
-        font-weight: bold;
-        font-size: 28px;
+    h3 {
+        font-weight: var(--font-medium);
+        font-size: var(--h3-font-size);
         color: var(--blue);
+        margin-bottom: .75rem;
     }
 
     p {
-        max-width: 500px;
-        margin-top: 16px;
-        margin-bottom: 18px;
-        
-        font-weight: 300;
-        font-size: 16px;
+        margin-bottom: 2rem;
     }
-`;
+    
+    .icons-container {
+        margin: 0;
+        padding: 0;
+        
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
 
-export const Resumo = styled.div`
-    display: flex;
-    flex-direction: row;
-    
-    margin: 0 auto;
-    max-width: 100vw;
-    height: 100vh;
-    
-    background: #000000;
+        > li {
+            padding: .5em .5em;
+            border-radius: .5em;
+            transition: all 0.2s ease-in-out;
+
+            animation: raiser-container .3s forwards 1s;
+        }
+
+        @keyframes raiser-container {
+            from {
+                box-shadow: none;
+                transform: scale(1);
+            }
+
+            to {
+                box-shadow: -6px -6px 6px 0 rgba(255, 255, 255, .5);
+                transform: scale(1.05);
+            }
+        }
+    }
 `;
 
 const IconStyle = css`
     width: 32px;
     height: 32px;
-    fill: black;
     flex-shrink: 0;
-    margin-right: 8px;
+    
+    fill: black;
 `;
 
 export const GitHubIcon = styled(AiFillGithub)`${IconStyle}`;
