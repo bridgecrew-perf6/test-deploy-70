@@ -12,6 +12,11 @@ export const Container = styled.div`
 
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
     background: var(--bg-color);
+
+    h3 {
+        font-weight: var(--font-semi-bold);
+        font-size: var(--normal-font-size);
+    }
 `;
 
 export const Wrapper = styled.div`

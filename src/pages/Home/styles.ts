@@ -12,7 +12,7 @@ export const Container = styled.div`
     align-items: center;
 
     @media (min-width: 1280px) {
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: center;
         gap: 10em;
         height: 100vh;
@@ -20,23 +20,28 @@ export const Container = styled.div`
 `;
 
 export const ProfileData = styled.div`
-    max-width: 375px;
+    max-width: 450px;
     margin-top: 16px;
 
     h1 {
         font-size: var(-big-font-size);
-        font-weight: var(--font-semi-bold);
+        font-weight: var(--font-regular);
+        
+        > strong {
+            margin-right: .5rem;    
+        }
     }
 
     h3 {
         font-weight: var(--font-medium);
         font-size: var(--h3-font-size);
-        color: var(--blue);
+        color: #9A8164;
         margin-bottom: .75rem;
     }
 
     p {
-        margin-bottom: 2rem;
+        font-size: var(--small-font-size);
+        margin-bottom: 0.75em;
     }
     
     .icons-container {
@@ -45,7 +50,7 @@ export const ProfileData = styled.div`
         
         display: flex;
         flex-direction: row;
-        gap: 1rem;
+        /* gap: rem; */
 
         > li {
             padding: .5em .5em;
@@ -58,11 +63,11 @@ export const ProfileData = styled.div`
         @keyframes raiser-container {
             from {
                 box-shadow: none;
-                transform: scale(1);
+                transform: scale(.67);
             }
 
             to {
-                box-shadow: -6px -6px 6px 0 rgba(255, 255, 255, .5);
+                /* box-shadow: -6px -6px 6px 0 rgba(255, 255, 255, .5); */
                 transform: scale(1.05);
             }
         }
@@ -70,8 +75,8 @@ export const ProfileData = styled.div`
 `;
 
 const IconStyle = css`
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     flex-shrink: 0;
     
     fill: black;

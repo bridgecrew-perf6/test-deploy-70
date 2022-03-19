@@ -13,12 +13,12 @@ const Home: React.FC = () => {
         <Container>
             <Avatar path={avatarUrl} name="Andevaldo"/>
             <ProfileData>
-                <h1>Olá, eu sou Andevaldo</h1>
-                <h3>Desenvolvedor</h3>
+                <h1><strong>Olá, eu sou</strong>Andevaldo Vitório</h1>
+                <h3>Desenvolvedor Android</h3>
                 <p>
-                    Eu tenho, experiências como professor tutor nas disciplinas de Matemática, 
-                    Língua Portuguesa e Inglesa; Aptidão com softwares; Participação com projetos 
-                    tecno-científico.
+                    Formado em Técnico em Mecatrônica pela Fundação Matias Machline (FMM). Cursando Engenharia da Computação na Universidade Federal do Amazonas.
+                    Experiências como professor tutor de disciplinas básicas e técnicas, e como pesquisador, em projetos
+                    tecnocientíficos.
                 </p>
                 
                 <ul className="icons-container">

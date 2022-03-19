@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Container, ContainerMenu, IconMenu, IconClose } from "./styles";
+import { Link } from "react-router-dom";
 
 interface propsNavItem {
     index: string;
+    link?: string;
     name: string;
 }
 
@@ -10,9 +12,9 @@ const NavBar: React.FC = () => {
     return (
         <Container>
             <ul className="navbar">
-                <NavItem index={"00"} name="Home"/>
-                <NavItem index={"01"} name="Sobre Mim"/>
-                <NavItem index={"02"} name="Projetos"/> 
+                <NavItem index={"1."} link="about" name="Sobre Mim"/>
+                <NavItem index={"2."} link="experiences" name="Experiências"/>
+                <NavItem index={"3."} link="projects" name="Projetos"/> 
             </ul>
             <ActionIcon/>
         </Container>
@@ -22,10 +24,10 @@ const NavBar: React.FC = () => {
 function NavItem (props: propsNavItem) {
     return (
         <li className="nav-item">
-            <a>
-                <span>{props.index}</span>
+            <span>{props.index}</span>
+            <Link className="link" to={`/${props.link}`}>
                 {props.name}
-            </a>
+            </Link>
         </li>
     );
 }
@@ -46,18 +48,20 @@ function ActionIcon() {
 function DropdownMenu() {
     function DropdownItem(props: propsNavItem) {
         return (
-            <a className="menu-item">
+            <li className="menu-item">
                 <span>{props.index}</span>
-                {props.name}
-            </a>
+                <Link className="link" to={`/${props.link}`}>
+                    {props.name}
+                </Link>
+            </li>
         );
     }
 
     return (
         <ContainerMenu>
-            <DropdownItem index={"00"} name="Home"/>
-            <DropdownItem index={"01"} name="Sobre Mim"/>
-            <DropdownItem index={"02"} name="Projetos"/>
+            <DropdownItem index={"1."} link="about"name="Sobre Mim"/>
+            <DropdownItem index={"2."} link="experiences" name="Experiências"/>
+            <DropdownItem index={"3."} link="projects" name="Projetos"/>
         </ContainerMenu>
     );
 }

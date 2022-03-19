@@ -49,7 +49,7 @@ export default createGlobalStyle`
     }
 
     :root {
-        --bg-color: #E8F1F2;
+        --bg-color: #E9E9E9;
         --black: #000000;
         --red: #A4262C;
         --blue: #13293D;
